@@ -1,0 +1,20 @@
+{
+  "name": "adrespect-rt",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "postcss": "^8.4.27",
+    "prettier": "3.0.1",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5"
+  }
+}
