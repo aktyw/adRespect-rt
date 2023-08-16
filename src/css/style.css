@@ -6,14 +6,24 @@
   html, p {
     font-family: Inter, sans-serif;
     @apply text-light-black text-base
+    
   }
 
   h1 {
     @apply text-6xl;
   }
 
+  h2 {
+    @apply text-5xl
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
   h1,h2,h3,h4,h5,h6 {
     font-family: Montserrat, sans-serif;
+    @apply font-medium
   }
 }
 
@@ -28,13 +38,22 @@
     @apply text-green border border-green
   }
   .btn-line {
-    @apply text-green underline
+    @apply text-green underline p-0 flex
   }
   .btn-square {
     @apply w-1/2 grid place-items-center
   }
 
-  .wrapper {
-    @apply max-w-[1280px]
+  .card {
+    @apply bg-white rounded-xl py-12 px-10 gap-12 col-span-4 flex flex-col justify-between content-start 
+  }
+  .card-info {
+    @apply [&>div>h3]:tracking-tight [&>div>h3]:pb-3 [&>img]:pb-8
   }
 }
+
+@layer utilities {
+  .wrapper {
+    @apply max-w-[1280px] m-auto
+  }
+} 
