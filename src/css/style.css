@@ -3,15 +3,38 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  html, p {
     font-family: Inter, sans-serif;
+    @apply text-light-black text-base
   }
 
-  p {
-    font-family: Inter, sans-serif;
+  h1 {
+    @apply text-6xl;
   }
 
   h1,h2,h3,h4,h5,h6 {
     font-family: Montserrat, sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply py-3 px-6 rounded-full
+  }
+  .btn-main {
+    @apply  bg-green text-light-gray
+  }
+  .btn-alt {
+    @apply text-green border border-green
+  }
+  .btn-line {
+    @apply text-green underline
+  }
+  .btn-square {
+    @apply w-1/2 grid place-items-center
+  }
+
+  .wrapper {
+    @apply max-w-[1280px]
   }
 }

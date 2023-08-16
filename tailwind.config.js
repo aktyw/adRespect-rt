@@ -22,6 +22,7 @@ export default {
     },
     extend: {
       spacing: {
+        88: '24rem',
         128: '32rem',
         144: '36rem',
       },
