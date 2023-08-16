@@ -14,7 +14,7 @@
   }
 
   h2 {
-    @apply text-5xl
+    @apply text-5xl tracking-tighter
   }
 
   h3 {
@@ -72,6 +72,14 @@
   }
 
   .italic-h {
-    @apply italic font-text font-medium
+    @apply italic font-text font-medium tracking-normal
+  }
+
+  .label-h {
+    @apply inline-block text-xs pb-4 
+  }
+
+  .grid-item {
+    @apply mb-8 cursor-pointer hover:scale-105 hover:transition-transform transition
   }
 } 
