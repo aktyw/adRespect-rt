@@ -45,7 +45,10 @@
     @apply text-green border border-green
   }
   .btn-alt-white {
-    @apply text-white border border-white
+    @apply text-light-gray border border-light-gray
+  }
+  .btn-alt-black {
+    @apply text-light-black border border-light-black
   }
   .btn-line {
     @apply text-green underline p-0 flex
@@ -64,6 +67,11 @@
   .divider {
     @apply w-full h-[1px] bg-light-gray my-16
   }
+
+  .gradient {
+    @apply w-full bg-gradient-to-t from-beige transition-all duration-700
+  }
+
 }
 
 @layer utilities {
@@ -82,4 +90,6 @@
   .grid-item {
     @apply mb-8 cursor-pointer hover:scale-105 hover:transition-transform transition
   }
+  
+  
 } 

@@ -31,6 +31,10 @@ export default {
       borderRadius: {
         '4xl': '2rem',
       },
+      transitionDuration: {
+        1500: '1500ms',
+        2000: '2000ms',
+      },
     },
   },
   plugins: [],
