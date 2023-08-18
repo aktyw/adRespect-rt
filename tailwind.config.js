@@ -10,8 +10,10 @@ export default {
     },
     colors: {
       'light-gray': '#F5F0EC',
+      gray: '#dbd8d5',
       'light-black': '#111111',
       green: '#1B5B31',
+      darkgreen: '#0f4221',
       white: '#ffffff',
       black: '#000000',
       beige: '#DCC1AB',
