@@ -54,6 +54,14 @@
     @apply w-1/2 grid place-items-center
   }
 
+  .dropdown {
+    @apply z-10 bg-white rounded-lg shadow w-44
+  }
+
+  .dropdown-item {
+    @apply block text-light-black rounded-md hover:bg-gray-100 px-4 py-2 text-sm transition-colors
+  }
+
   .card {
     @apply bg-white rounded-xl py-12 px-10 gap-12 col-span-4 flex flex-col justify-between content-start 
   }
