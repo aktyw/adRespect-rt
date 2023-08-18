@@ -58,11 +58,12 @@
   }
 
   .card {
-    @apply bg-white rounded-xl py-12 px-10 gap-12 col-span-4 flex flex-col justify-between content-start 
+    @apply bg-white rounded-3xl py-12 px-10 gap-12 col-span-4 flex flex-col justify-between content-start 
   }
   .card-info {
-    @apply [&>div>h3]:tracking-tight [&>div>h3]:pb-3 [&>img]:pb-8
+    @apply [&>div>h3]:tracking-tight [&>div>h3]:pb-3 [&>img]:pb-8 
   }
+  
 
   .divider {
     @apply w-full h-[1px] bg-light-gray my-16
@@ -88,7 +89,10 @@
   }
 
   .grid-item {
-    @apply mb-8 cursor-pointer hover:scale-105 hover:transition-transform transition
+    @apply cursor-pointer hover:scale-105 hover:transition-transform  duration-500 hover:duration-500
+  }
+  .grid-image-container {
+    @apply  mb-8 overflow-hidden
   }
   
   

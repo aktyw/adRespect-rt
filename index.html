@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Giard Design</title>
     <script type="module" src="./src/main.js"></script>
+    <title>Giard Design</title>
   </head>
   <body class="">
     <header class="grid place-items-center">
@@ -90,7 +90,9 @@
           <div class="flex col-span-full gap-16">
             <div class="card">
               <div class="card-info">
-                <img src="./src/assets/pen-icon.svg" alt="Pen" />
+                <div class="min-h-[44px] mb-8">
+                  <img src="./src/assets/pen-icon.svg" alt="Pen" />
+                </div>
                 <div>
                   <h3>Projekty</h3>
                   <p>
@@ -118,7 +120,9 @@
 
             <div class="card">
               <div class="card-info">
-                <img src="./src/assets/eye-icon.svg" alt="Pen" />
+                <div class="min-h-[44px] mb-8">
+                  <img src="./src/assets/eye-icon.svg" alt="Eye" />
+                </div>
                 <div>
                   <h3>Wizualizacje</h3>
                   <p>
@@ -146,7 +150,9 @@
 
             <div class="card">
               <div class="card-info">
-                <img src="./src/assets/star-icon.svg" alt="Pen" />
+                <div class="min-h-[44px] mb-8">
+                  <img src="./src/assets/star-icon.svg" alt="Star" />
+                </div>
                 <div>
                   <h3>Realizacje</h3>
                   <p>Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
@@ -228,25 +234,55 @@
         </div>
 
         <div class="relative pt-24 max-w-[1920px] m-auto">
-          <div class="js-gallery m-auto overflow-hidden max-h-[1400px] transition-all duration-700">
-            <div>
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_01.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_02.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_03.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_05.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_06.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_04.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_08.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_07.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_09.png" alt="" />
-
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_01.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_02.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_03.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_01.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_02.png" alt="" />
-              <img class="js-grid-item grid-item" src="./src/assets/gallery/g_03.png" alt="" />
-            </div>
+          <div
+            id="js-gallery"
+            class="js-gallery m-auto grid-image-container max-h-[1400px] transition-height duration-700"
+          >
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
+              <img class="grid-item" src="./src/assets/gallery/g_01.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
+              <img class="grid-item" src="./src/assets/gallery/g_02.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
+              <img class="grid-item" src="./src/assets/gallery/g_03.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_05.png">
+              <img class="grid-item" src="./src/assets/gallery/g_05.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_06.png">
+              <img class="grid-item" src="./src/assets/gallery/g_06.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_04.png">
+              <img class="grid-item" src="./src/assets/gallery/g_04.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_08.png">
+              <img class="grid-item" src="./src/assets/gallery/g_08.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_07.png">
+              <img class="grid-item" src="./src/assets/gallery/g_07.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_09.png">
+              <img class="grid-item" src="./src/assets/gallery/g_09.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
+              <img class="grid-item" src="./src/assets/gallery/g_01.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
+              <img class="grid-item" src="./src/assets/gallery/g_02.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
+              <img class="grid-item" src="./src/assets/gallery/g_03.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
+              <img class="grid-item" src="./src/assets/gallery/g_01.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
+              <img class="grid-item" src="./src/assets/gallery/g_02.png" alt="" />
+            </a>
+            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
+              <img class="grid-item" src="./src/assets/gallery/g_03.png" alt="" />
+            </a>
           </div>
 
           <div class="js-gradient gradient absolute bottom-0 h-3/4 z-30"></div>
