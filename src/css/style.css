@@ -14,7 +14,7 @@
   }
 
   h2 {
-    @apply text-5xl
+    @apply text-5xl tracking-tighter
   }
 
   h3 {
@@ -33,25 +33,32 @@
 
 @layer components {
   .btn {
-    @apply py-3 px-6 rounded-full
+    @apply py-3 px-6 rounded-full transition hover:transition
   }
   .btn-main {
-    @apply  bg-green text-light-gray
+    @apply  bg-green text-light-gray hover:bg-darkgreen 
   }
+
   .btn-main-white {
-    @apply  bg-light-gray text-green
+    @apply  bg-light-gray text-green  hover:bg-gray 
   }
   .btn-alt-green {
-    @apply text-green border border-green
+    @apply text-green border border-green hover:bg-green hover:text-white [&:hover>svg]:fill-white  
   }
   .btn-alt-white {
-    @apply text-white border border-white
+    @apply text-light-gray border border-light-gray hover:bg-white hover:text-green [&:hover>svg]:fill-green  
+  }
+  .btn-alt-black {
+    @apply text-light-black border border-light-black hover:bg-light-black hover:text-white [&:hover>svg]:fill-white  
   }
   .btn-line {
-    @apply text-green underline p-0 flex
+    @apply text-green underline p-0 flex 
   }
   .btn-square {
     @apply w-1/2 grid place-items-center
+  }
+  .link {
+    @apply w-fit relative cursor-pointer 
   }
 
   .dropdown {
@@ -63,15 +70,22 @@
   }
 
   .card {
-    @apply bg-white rounded-xl py-12 px-10 gap-12 col-span-4 flex flex-col justify-between content-start 
+    @apply bg-white rounded-3xl py-12 px-10 gap-12 col-span-4 flex flex-col 
+    justify-between content-start 
   }
   .card-info {
-    @apply [&>div>h3]:tracking-tight [&>div>h3]:pb-3 [&>img]:pb-8
+    @apply [&>div>h3]:tracking-tight [&>div>h3]:pb-3 [&>img]:pb-8 
   }
+  
 
   .divider {
     @apply w-full h-[1px] bg-light-gray my-16
   }
+
+  .gradient {
+    @apply w-full bg-gradient-to-t from-beige transition-all duration-700
+  }
+
 }
 
 @layer utilities {
@@ -80,6 +94,31 @@
   }
 
   .italic-h {
-    @apply italic font-text font-medium
+    @apply italic font-text font-medium tracking-normal
   }
+
+  .label-h {
+    @apply inline-block text-xs pb-4 
+  }
+
+  .grid-item {
+    @apply cursor-pointer hover:scale-105 hover:transition-transform  duration-500 hover:duration-500
+  }
+  .grid-image-container {
+    @apply  mb-8 overflow-hidden
+  }
+
+  .under {
+    @apply  pb-1 before:content-[''] before:absolute before:w-full 
+    before:scale-x-100  before:h-0.5 before:bottom-0 before:left-0 before:origin-bottom-left
+    before:transition hover:before:scale-x-0 hover:before:origin-bottom-right 
+    hover:before:transition hover:before:duration-300 before:duration-300
+  }
+  .under-alt {
+    @apply  pb-1 before:content-[''] before:absolute before:w-full 
+    before:scale-x-0  before:h-0.5 before:bottom-0 before:left-0 before:origin-bottom-right
+    before:transition hover:before:scale-x-100 hover:before:origin-bottom-left 
+    hover:before:transition hover:before:duration-300 before:duration-300
+  }
+  
 } 
