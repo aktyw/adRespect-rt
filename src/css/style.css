@@ -54,7 +54,7 @@
     @apply text-green underline p-0 flex 
   }
   .btn-square {
-    @apply w-1/2 grid place-items-center
+    @apply w-1/2 grid place-items-center hover:bg-white duration-500 transition-colors
   }
   .link {
     @apply w-fit relative cursor-pointer 
@@ -109,13 +109,13 @@
 
   .under {
     @apply  pb-1 before:content-[''] before:absolute before:w-full 
-    before:scale-x-100  before:h-0.5 before:bottom-0 before:left-0 before:origin-bottom-left
+    before:scale-x-100  before:h-[1px] before:bottom-0 before:left-0 before:origin-bottom-left
     before:transition hover:before:scale-x-0 hover:before:origin-bottom-right 
     hover:before:transition hover:before:duration-300 before:duration-300
   }
   .under-alt {
     @apply  pb-1 before:content-[''] before:absolute before:w-full 
-    before:scale-x-0  before:h-0.5 before:bottom-0 before:left-0 before:origin-bottom-right
+    before:scale-x-0  before:h-[1px] before:bottom-0 before:left-0 before:origin-bottom-right
     before:transition hover:before:scale-x-100 hover:before:origin-bottom-left 
     hover:before:transition hover:before:duration-300 before:duration-300
   }
