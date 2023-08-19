@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "fslightbox": "^3.4.1",
-    "masonry-layout": "^4.2.2"
+    "masonry-layout": "^4.2.2",
+    "swiper": "^10.2.0"
   }
 }

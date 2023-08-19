@@ -7,7 +7,7 @@
     <title>Giard Design</title>
   </head>
   <body>
-    <header class="js-header relative grid place-items-center">
+    <header class="js-header relative grid place-items-center w-full">
       <div class="js-nav-container fixed top-0 z-50 bg-white w-full transition-transform duration-300">
         <nav class="js-nav wrapper flex flex-row w-full text-sm gap-12 justify-between py-4">
           <a href="#">
@@ -105,48 +105,99 @@
         </nav>
       </div>
 
-      <div class="js-slider relative bg-beige w-full flex flex-col items-center py-24 h-[720px] mt-18">
-        <div class="wrapper grid grid-cols-12">
-          <div class="flex flex-col col-start-1 col-span-5">
-            <div class="flex flex-col gap-11 pb-9">
-              <h1 class="leading-tight">Nowoczesna aranżacja Twojego ogrodu</h1>
-              <p class="pr-16">
-                Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy
-                zakres usług z indywidualnym podejściem do każdego projektu.
-              </p>
-            </div>
-            <div class="flex pt-9 gap-9">
-              <button class="btn btn-main">Skontaktuj się z nami</button>
-              <button class="btn btn-alt-green flex items-center">
-                Zobacz nasze realizacje
-                <svg
-                  class="rotate-90 ml-2 -mr-1 transition"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="#1B5B31"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
-                  />
-                </svg>
-              </button>
+      <div class="swiper w-screen">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide js-slider relative bg-beige flex flex-col items-center py-24 h-[720px] mt-18">
+            <div class="wrapper grid grid-cols-12">
+              <div class="flex flex-col col-start-1 col-span-5">
+                <div class="flex flex-col gap-11 pb-9">
+                  <h1 class="leading-tight">Nowoczesna aranżacja Twojego ogrodu</h1>
+                  <p class="pr-16">
+                    Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy
+                    zakres usług z indywidualnym podejściem do każdego projektu.
+                  </p>
+                </div>
+                <div class="flex pt-9 gap-9">
+                  <button class="btn btn-main">Skontaktuj się z nami</button>
+                  <button class="btn btn-alt-green flex items-center">
+                    Zobacz nasze realizacje
+                    <svg
+                      class="rotate-90 ml-2 -mr-1 transition"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="#1B5B31"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="object-cover h-[720px] max-h-full absolute right-0 top-0 w-[50%] pl-12"
+                  src="./src/assets/hero_garden.png"
+                  alt=""
+                />
+                <div class="w-48 h-24 bg-light-gray absolute bottom-0 right-0 flex">
+                  <button class="btn-square swiper-btn-prev">
+                    <img class="rotate-180" src="./src/assets/arrow.svg" />
+                  </button>
+                  <button class="btn-square swiper-btn-next">
+                    <img src="./src/assets/arrow.svg" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-            <img
-              class="object-cover h-[720px] max-h-full absolute right-0 top-0 w-[50%] pl-12"
-              src="./src/assets/hero_garden.png"
-              alt=""
-            />
-            <div class="w-48 h-24 bg-light-gray absolute bottom-0 right-0 flex">
-              <button class="btn-square">
-                <img class="rotate-180" src="./src/assets/arrow.svg" />
-              </button>
-              <button class="btn-square">
-                <img src="./src/assets/arrow.svg" />
-              </button>
+
+          <div class="swiper-slide js-slider relative bg-white w-full flex flex-col items-center py-24 h-[720px] mt-18">
+            <div class="wrapper grid grid-cols-12">
+              <div class="flex flex-col col-start-1 col-span-5">
+                <div class="flex flex-col gap-11 pb-9">
+                  <h1 class="leading-tight">Nowoczesna aranżacja Twojego ogrodu</h1>
+                  <p class="pr-16">
+                    Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy
+                    zakres usług z indywidualnym podejściem do każdego projektu.
+                  </p>
+                </div>
+                <div class="flex pt-9 gap-9">
+                  <button class="btn btn-main">Skontaktuj się z nami</button>
+                  <button class="btn btn-alt-green flex items-center">
+                    Zobacz nasze realizacje
+                    <svg
+                      class="rotate-90 ml-2 -mr-1 transition"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="#1B5B31"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div>
+                <img
+                  class="object-cover h-[720px] max-h-full absolute right-0 top-0 w-[50%] pl-12"
+                  src="./src/assets/hero_garden.png"
+                  alt=""
+                />
+                <div class="w-48 h-24 bg-light-gray absolute bottom-0 right-0 flex">
+                  <button class="btn-square swiper-btn-prev">
+                    <img class="rotate-180" src="./src/assets/arrow.svg" />
+                  </button>
+                  <button class="btn-square swiper-btn-next">
+                    <img src="./src/assets/arrow.svg" />
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

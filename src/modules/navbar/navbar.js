@@ -1,5 +1,5 @@
 const navContainer = document.querySelector('.js-nav-container');
-const slider = document.querySelector('.js-slider');
+const sliders = document.querySelectorAll('.js-slider');
 
 const options = {
   rootMargin: '-150px',
@@ -24,4 +24,4 @@ const hideNavbar = () => {
 
 export const observer = new IntersectionObserver(handler, options);
 
-observer.observe(slider);
+sliders.forEach((slider) => observer.observe(slider));
