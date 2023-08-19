@@ -6,7 +6,6 @@
   html, p {
     font-family: Inter, sans-serif;
     @apply text-light-black text-base
-    
   }
 
   h1 {
@@ -40,7 +39,7 @@
   }
 
   .btn-main-white {
-    @apply  bg-light-gray text-green  hover:bg-gray 
+    @apply  bg-light-gray text-green  hover:bg-dark-gray 
   }
   .btn-alt-green {
     @apply text-green border border-green hover:bg-green hover:text-white [&:hover>svg]:fill-white  

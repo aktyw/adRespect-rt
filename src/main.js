@@ -1,6 +1,6 @@
 import './css/style.css';
-import { masonry } from './masonry';
-import { fslightbox } from 'fslightbox';
-import { revealProjects } from './gallery';
-import { revealMenu, revealSubMenu } from './dropdown';
-
+export { masonry } from './modules/gallery/masonry';
+export { fslightbox } from 'fslightbox';
+export { revealProjects } from './modules/gallery/gallery';
+export { revealMenu, revealSubMenu } from './modules/navbar/dropdown';
+export { observer } from './modules/navbar/navbar';

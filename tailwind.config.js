@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 
 const colors = require('tailwindcss/colors');
@@ -13,7 +14,7 @@ export default {
     },
     colors: {
       'light-gray': '#F5F0EC',
-      gray: '#dbd8d5',
+      'dark-gray': '#dbd8d5',
       'light-black': '#111111',
       green: '#1B5B31',
       darkgreen: '#0f4221',
@@ -34,6 +35,7 @@ export default {
       },
       spacing: {
         15: '60px',
+        18: '72px',
         27: '110px',
         30: '120px',
         128: '32rem',
