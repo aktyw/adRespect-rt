@@ -7,7 +7,7 @@
     <title>Giard Design</title>
   </head>
   <body>
-    <header class="js-header relative grid place-items-center w-full">
+    <header class="js-header relative grid place-items-center">
       <div class="js-nav-container fixed top-0 z-50 bg-white w-full transition-transform duration-300">
         <nav class="js-nav wrapper flex flex-row w-full text-sm gap-12 justify-between py-4">
           <a href="#">
@@ -17,7 +17,13 @@
             <li class="js-btn-menu relative">
               <button class="flex link under-alt !pb-0 before:bg-light-black">
                 Oferta
-                <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+                <svg
+                  class="js-menu-arrow transition"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="20"
+                  viewBox="0 -960 960 960"
+                  width="20"
+                >
                   <path
                     d="M480-362.384 271.384-571l21.462-21.462L480-405.308l187.154-187.154L688.616-571 480-362.384Z"
                   />
@@ -35,7 +41,7 @@
                     >
                       Aranżacje
                       <svg
-                        class="-rotate-90"
+                        class="js-submenu-arrow transition"
                         xmlns="http://www.w3.org/2000/svg"
                         height="20"
                         width="20"
@@ -64,7 +70,7 @@
                     </div>
                   </li>
                   <li>
-                    <a href="#" class="dropdown-item">Pielęgnacja</a>
+                    <a href="#" class="dropdown-item">Realizacje</a>
                   </li>
                   <li>
                     <a href="#" class="dropdown-item">Projekty</a>
@@ -105,9 +111,11 @@
         </nav>
       </div>
 
-      <div class="swiper w-screen">
+      <div class="swiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide js-slider relative bg-beige flex flex-col items-center py-24 h-[720px] mt-18">
+          <div
+            class="swiper-slide !w-full js-slider relative bg-beige flex flex-col items-center py-24 h-[720px] mt-18"
+          >
             <div class="wrapper grid grid-cols-12">
               <div class="flex flex-col col-start-1 col-span-5">
                 <div class="flex flex-col gap-11 pb-9">
@@ -153,8 +161,9 @@
               </div>
             </div>
           </div>
-
-          <div class="swiper-slide js-slider relative bg-white w-full flex flex-col items-center py-24 h-[720px] mt-18">
+          <div
+            class="swiper-slide !w-full js-slider relative bg-white flex flex-col items-center py-24 h-[720px] mt-18"
+          >
             <div class="wrapper grid grid-cols-12">
               <div class="flex flex-col col-start-1 col-span-5">
                 <div class="flex flex-col gap-11 pb-9">

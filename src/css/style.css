@@ -73,9 +73,9 @@
     justify-between content-start 
   }
   .card-info {
-    @apply [&>div>h3]:tracking-tight [&>div>h3]:pb-3 [&>img]:pb-8 
+    @apply [&>div>h3]:tracking-tighter [&>div>h3]:pb-3 [&>img]:pb-8 
   }
-  
+
 
   .divider {
     @apply w-full h-[1px] bg-light-gray my-16

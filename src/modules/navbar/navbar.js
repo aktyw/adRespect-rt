@@ -1,8 +1,10 @@
+import { menuState } from './dropdown';
+
 const navContainer = document.querySelector('.js-nav-container');
-const sliders = document.querySelectorAll('.js-slider');
+const swiper = document.querySelector('.swiper');
 
 const options = {
-  rootMargin: '-150px',
+  rootMargin: '-200px',
   threshold: 0,
 };
 
@@ -18,10 +20,12 @@ const showNavbar = () => {
 };
 
 const hideNavbar = () => {
+  if (menuState.isOpenMenu) return;
+
   navContainer.classList.add('-translate-y-20');
   navContainer.classList.remove('translate-y-0');
 };
 
 export const observer = new IntersectionObserver(handler, options);
 
-sliders.forEach((slider) => observer.observe(slider));
+observer.observe(swiper);
