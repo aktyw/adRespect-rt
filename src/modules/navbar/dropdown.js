@@ -1,3 +1,4 @@
+import { hideElement } from '../../main';
 const menu = document.querySelector('.js-menu');
 const subMenu = document.querySelector('.js-submenu');
 const menuBtn = document.querySelector('.js-btn-menu');
@@ -18,9 +19,7 @@ const showDropdown = (e, { dropdown, type, arrow }) => {
 };
 
 const hideMenus = () => {
-  if (menu.classList.contains('hidden')) return;
-
-  [menu, subMenu].forEach((m) => m.classList.add('hidden'));
+  [menu, subMenu].forEach(hideElement);
   menuState.isOpenMenu = false;
   menuState.isOpenSubMenu = false;
   rotateArrow(menuArrow);
@@ -37,7 +36,5 @@ menuBtn.addEventListener('click', (e) => {
 submenuBtn.addEventListener('click', (e) => {
   showDropdown(e, { dropdown: subMenu, type: 'isOpenSubMenu', arrow: subMenuArrow });
 });
-
-// [menuBtn, submenuBtn].forEach((m) => m.addEventListener('click', showDropdown));
 
 document.addEventListener('click', hideMenus);
