@@ -31,6 +31,7 @@ const rotateArrow = (arrow, state) =>
 
 menuBtn.addEventListener('click', (e) => {
   showDropdown(e, { dropdown: menu, type: 'isOpenMenu', arrow: menuArrow });
+  if (e.target.closest('.js-dropdown-item')) hideMenus();
 });
 
 submenuBtn.addEventListener('click', (e) => {
