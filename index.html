@@ -39,9 +39,74 @@
                 </svg>
               </div>
             </li>
-            <li>
-              <div class="hamburger">X</div>
+            <li class="js-hamburger z-50">
+              <div class="space-y-2">
+                <span class="block w-8 h-1 bg-light-black"></span>
+                <span class="block w-8 h-1 bg-light-black"></span>
+                <span class="block w-8 h-1 bg-light-black"></span>
+              </div>
             </li>
+          </ul>
+
+          <ul
+            class="js-mobile-menu flex md:hidden h-screen w-screen bg-light-gray z-50 !fixed top-0 left-0 justify-center items-start flex-col text-5xl gap-12 p-16 translate-x-full"
+          >
+            <button class="js-close-menu absolute top-12 right-12">X</button>
+            <li class="js-btn-menu-mobile relative">
+              <a class="js-link-mobile flex link !pb-0 before:bg-light-black">Oferta</a>
+
+              <div class="hidden dropdown absolute top-12 right-0">
+                <ul class="py-2 text-sm text-light-black">
+                  <li>
+                    <a href="#" class="">Wizualizacje</a>
+                  </li>
+                  <li>
+                    <button class="relative flex items-center justify-between w-full xs:px-4 py-2 hover:bg-gray-100">
+                      Aranżacje
+                      <svg
+                        class="transition"
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="20"
+                        width="20"
+                        viewBox="0 -960 960 960"
+                      >
+                        <path
+                          d="M480-362.384 271.384-571l21.462-21.462L480-405.308l187.154-187.154L688.616-571 480-362.384Z"
+                        />
+                      </svg>
+                    </button>
+                    <div class="hidden dropdown absolute top-9 left-44 ml-2">
+                      <ul class="py-2 text-sm" aria-labelledby="sub-menu">
+                        <li>
+                          <a href="#" class="">Ogród</a>
+                        </li>
+                        <li>
+                          <a href="#" class="">Przestrzeń</a>
+                        </li>
+                        <li>
+                          <a href="#" class="">Parki</a>
+                        </li>
+                        <li>
+                          <a href="#" class="">Skwery</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" class="">Realizacje</a>
+                  </li>
+                  <li>
+                    <a href="#" class="">Projekty</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li><a class="js-link-mobile link !pb-0 before:bg-light-black" href="">O firmie</a></li>
+            <li>
+              <a class="js-link-mobile link !pb-0 before:bg-light-black" href="">Realizacje</a>
+            </li>
+            <li><a class="js-link-mobile link !pb-0 before:bg-light-black" href="">Kontakt</a></li>
           </ul>
 
           <ul class="gap-12 [&>li]:flex [&>li]:items-center md:flex hidden">
@@ -151,7 +216,7 @@
               <img
                 class="md:hidden object-cover h-60 md:h-[720px] max-h-full relative right-0 top-0 w-full md:w-[50%] md:pl-12"
                 src="./src/assets/hero_garden.png"
-                alt=""
+                alt="Ogród z widokiem"
               />
               <div class="md:hidden w-36 md:w-48 h-16 md:h-24 bg-light-gray absolute bottom-0 right-0 flex">
                 <button class="btn-square swiper-btn-prev">
@@ -192,7 +257,7 @@
                 </div>
               </div>
               <div>
-                <img class="slide-img" src="./src/assets/hero_garden.png" alt="" />
+                <img class="slide-img" src="./src/assets/hero_garden.png" alt="Ogród z widokiem" />
                 <div class="hidden w-48 h-24 bg-light-gray absolute bottom-0 right-0 md:flex">
                   <button class="btn-square swiper-btn-prev">
                     <img class="rotate-180" src="./src/assets/arrow.svg" />
@@ -210,7 +275,7 @@
               <img
                 class="md:hidden object-cover h-60 md:h-[720px] max-h-full relative right-0 top-0 w-full md:w-[50%] md:pl-12"
                 src="./src/assets/hero_garden.png"
-                alt=""
+                alt="Ogród z widokiem"
               />
               <div class="md:hidden w-36 md:w-48 h-16 md:h-24 bg-light-gray absolute bottom-0 right-0 flex">
                 <button class="btn-square swiper-btn-prev">
@@ -251,7 +316,7 @@
                 </div>
               </div>
               <div>
-                <img class="slide-img" src="./src/assets/hero_garden.png" alt="" />
+                <img class="slide-img" src="./src/assets/hero_garden.png" alt="Ogród z widokiem" />
                 <div class="hidden w-48 h-24 bg-light-gray absolute bottom-0 right-0 md:flex">
                   <button class="btn-square swiper-btn-prev">
                     <img class="rotate-180" src="./src/assets/arrow.svg" />
@@ -284,7 +349,7 @@
             <div class="card">
               <div class="card-info">
                 <div class="min-h-[44px] mb-8">
-                  <img src="./src/assets/pen-icon.svg" alt="Pen" />
+                  <img src="./src/assets/pen-icon.svg" />
                 </div>
                 <div>
                   <h3>Projekty</h3>
@@ -316,7 +381,7 @@
             <div class="card">
               <div class="card-info">
                 <div class="min-h-[44px] mb-8">
-                  <img src="./src/assets/eye-icon.svg" alt="Eye" />
+                  <img src="./src/assets/eye-icon.svg" />
                 </div>
                 <div>
                   <h3>Wizualizacje</h3>
@@ -348,7 +413,7 @@
             <div class="card">
               <div class="card-info">
                 <div class="min-h-[44px] mb-8">
-                  <img src="./src/assets/star-icon.svg" alt="Star" />
+                  <img src="./src/assets/star-icon.svg" />
                 </div>
                 <div>
                   <h3>Realizacje</h3>
@@ -385,7 +450,7 @@
               <img
                 class="object-cover h-60 md:h-[720px] max-h-full md:absolute relative left-0 top-0 w-full md:w-[50%]"
                 src="./src/assets/about_garden.png"
-                alt=""
+                alt="Piękny ogród"
               />
             </div>
 
@@ -445,76 +510,76 @@
           >
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
-                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_01.png" alt="" />
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_01.png" alt="Ogród i palmy" />
               </a>
             </div>
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
-                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_02.png" alt="" />
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_02.png" alt="Ogród z basenem" />
               </a>
             </div>
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
-                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_03.png" alt="" />
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_03.png" alt="Ogród i kwiaty" />
               </a>
             </div>
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_05.png">
-                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_05.png" alt="" />
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_05.png" alt="Oczko wodne" />
               </a>
             </div>
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_06.png">
-                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_06.png" alt="" />
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_06.png" alt="Droga do ogrodu" />
               </a>
             </div>
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_04.png">
-                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_04.png" alt="" />
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_04.png" alt="Wejście do ogrodu" />
               </a>
             </div>
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_08.png">
-                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_08.png" alt="" />
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_08.png" alt="Droga do ogrodu" />
               </a>
             </div>
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_07.png">
-                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_07.png" alt="" />
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_07.png" alt="Droga do ogrodu" />
               </a>
             </div>
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_09.png">
-                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_09.png" alt="" />
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_09.png" alt="Widok na ogród" />
               </a>
               <div class="grid-sizer">
                 <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
-                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_01.png" alt="" />
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_01.png" alt="Ogród i palmy" />
                 </a>
               </div>
               <div class="grid-sizer">
                 <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
-                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_02.png" alt="" />
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_02.png" alt="Ogród z basenem" />
                 </a>
               </div>
               <div class="grid-sizer">
                 <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
-                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_03.png" alt="" />
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_03.png" alt="Ogród i kwiaty" />
                 </a>
               </div>
               <div class="grid-sizer">
                 <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
-                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_01.png" alt="" />
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_01.png" alt="Ogród i palmy" />
                 </a>
               </div>
               <div class="grid-sizer">
                 <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
-                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_02.png" alt="" />
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_02.png" alt="Ogród i palmy" />
                 </a>
               </div>
               <div class="grid-sizer">
                 <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
-                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_03.png" alt="" />
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_03.png" alt="Ogród i palmy" />
                 </a>
               </div>
             </div>

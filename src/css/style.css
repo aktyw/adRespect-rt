@@ -63,6 +63,7 @@
     @apply w-fit relative cursor-pointer 
   }
 
+
   .slide {
     @apply !w-full relative md:px-8 md:min-h-[720px] mt-18 
   }
