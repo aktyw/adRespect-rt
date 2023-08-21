@@ -5,15 +5,15 @@
 @layer base {
   html, p {
     font-family: Inter, sans-serif;
-    @apply text-light-black text-base
+    @apply text-light-black text-base 
   }
 
   h1 {
-    @apply text-6xl;
+    @apply text-2xl sm:text-3xl lg:text-5xl xl:text-6xl
   }
 
   h2 {
-    @apply text-5xl tracking-tighter
+    @apply text-3xl sm:text-4xl md:text-5xl tracking-tighter
   }
 
   h3 {
@@ -32,12 +32,11 @@
 
 @layer components {
   .btn {
-    @apply py-3 px-6 rounded-full transition hover:transition
+    @apply py-3 px-6 rounded-full transition hover:transition text-base max-w-[280px]
   }
   .btn-main {
     @apply  bg-green text-light-gray hover:bg-darkgreen 
   }
-
   .btn-main-white {
     @apply  bg-light-gray text-green  hover:bg-dark-gray 
   }
@@ -48,7 +47,11 @@
     @apply text-light-gray border border-light-gray hover:bg-white hover:text-green [&:hover>svg]:fill-green  
   }
   .btn-alt-black {
-    @apply text-light-black border border-light-black hover:bg-light-black hover:text-white [&:hover>svg]:fill-white  
+    @apply text-light-black border border-light-black 
+    hover:bg-light-black hover:text-white [&:hover>svg]:fill-white  
+  }
+  .btn-alt-black-inner {
+    @apply text-white border [&>svg]:fill-white bg-black
   }
   .btn-line {
     @apply text-green underline p-0 flex 
@@ -58,6 +61,14 @@
   }
   .link {
     @apply w-fit relative cursor-pointer 
+  }
+
+  .slide {
+    @apply !w-full relative md:px-8 md:min-h-[720px] mt-18 
+  }
+
+  .slide-img {
+    @apply hidden md:block object-cover h-48 md:h-[720px] max-h-full absolute right-0 top-0 w-full md:w-[50%] md:pl-12
   }
 
   .dropdown {
@@ -72,10 +83,10 @@
     @apply bg-white rounded-3xl py-12 px-10 gap-12 col-span-4 flex flex-col 
     justify-between content-start 
   }
+
   .card-info {
     @apply [&>div>h3]:tracking-tighter [&>div>h3]:pb-3 [&>img]:pb-8 
   }
-
 
   .divider {
     @apply w-full h-[1px] bg-light-gray my-16
@@ -84,12 +95,11 @@
   .gradient {
     @apply w-full bg-gradient-to-t from-beige transition-all duration-700
   }
-
 }
 
 @layer utilities {
   .wrapper {
-    @apply max-w-[1280px] m-auto
+    @apply max-w-[1280px] mx-auto
   }
 
   .italic-h {
@@ -101,10 +111,13 @@
   }
 
   .grid-item {
-    @apply cursor-pointer hover:scale-105 hover:transition-transform  duration-500 hover:duration-500
+    @apply cursor-pointer hover:scale-105 hover:transition-transform duration-500 hover:duration-500
   }
   .grid-image-container {
-    @apply  mb-8 overflow-hidden
+    @apply mb-4 md:mb-8 overflow-hidden 
+  }
+  .grid-sizer {
+    @apply lg:w-[450px] sm:w-[400px] w-[320px]
   }
 
   .under {

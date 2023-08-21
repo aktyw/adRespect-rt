@@ -8,12 +8,43 @@
   </head>
   <body>
     <header class="js-header relative grid place-items-center">
-      <div class="js-nav-container fixed top-0 z-50 bg-white w-full transition-transform duration-300">
+      <div class="js-nav-container fixed top-0 z-50 px-4 xl:px-0 bg-white w-full transition-transform duration-300">
         <nav class="js-nav wrapper flex flex-row w-full text-sm gap-12 justify-between py-4">
           <a href="#">
             <img class="h-full inline-flex" src="./src/assets/giarddesign.svg" alt="giarddesign logo" />
           </a>
-          <ul class="flex gap-12 [&>li]:flex [&>li]:items-center">
+
+          <ul class="md:hidden flex items-center">
+            <li>
+              <div class="relative flex items-center">
+                <input
+                  class="border border-white bg-white h-10 pr-10 w-1 rounded-lg text-sm cursor-pointer focus:cursor-auto focus:pl-4 focus:pr-8 md:focus:w-48 focus:w-36 focus:border-gray-300 transition-width duration-500"
+                  type="search"
+                  name="search"
+                  placeholder="Szukaj"
+                />
+                <svg
+                  class="relative right-8 pointer-events-none"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10 2.25C5.71979 2.25 2.25 5.71979 2.25 10C2.25 14.2802 5.71979 17.75 10 17.75C11.87 17.75 13.5853 17.0877 14.9242 15.9848L20.4697 21.5303L20.5538 21.6029C20.8474 21.8208 21.2641 21.7966 21.5303 21.5303C21.8232 21.2374 21.8232 20.7626 21.5303 20.4697L15.9848 14.9242C17.0877 13.5853 17.75 11.87 17.75 10C17.75 5.71979 14.2802 2.25 10 2.25ZM10 3.75C13.4518 3.75 16.25 6.54822 16.25 10C16.25 13.4518 13.4518 16.25 10 16.25C6.54822 16.25 3.75 13.4518 3.75 10C3.75 6.54822 6.54822 3.75 10 3.75Z"
+                    fill="#111111"
+                  />
+                </svg>
+              </div>
+            </li>
+            <li>
+              <div class="hamburger">X</div>
+            </li>
+          </ul>
+
+          <ul class="gap-12 [&>li]:flex [&>li]:items-center md:flex hidden">
             <li class="js-btn-menu relative">
               <button class="flex link under-alt !pb-0 before:bg-light-black">
                 Oferta
@@ -37,7 +68,7 @@
                   </li>
                   <li>
                     <button
-                      class="js-btn-submenu relative flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100"
+                      class="js-btn-submenu relative flex items-center justify-between w-full xs:px-4 py-2 hover:bg-gray-100"
                     >
                       Aranżacje
                       <svg
@@ -80,7 +111,9 @@
             </li>
 
             <li><a class="link under-alt !pb-0 before:bg-light-black" href="">O firmie</a></li>
-            <li><a class="link under-alt !pb-0 before:bg-light-black" href="">Realizacje</a></li>
+            <li>
+              <a class="link under-alt !pb-0 before:bg-light-black" href="">Realizacje</a>
+            </li>
             <li><a class="link under-alt !pb-0 before:bg-light-black" href="">Kontakt</a></li>
 
             <li>
@@ -111,26 +144,40 @@
         </nav>
       </div>
 
-      <div class="swiper">
+      <div class="swiper sm:w-full h-full md:h-auto">
         <div class="swiper-wrapper">
-          <div
-            class="swiper-slide !w-full js-slider relative bg-beige flex flex-col items-center py-24 h-[720px] mt-18"
-          >
-            <div class="wrapper grid grid-cols-12">
-              <div class="flex flex-col col-start-1 col-span-5">
-                <div class="flex flex-col gap-11 pb-9">
-                  <h1 class="leading-tight">Nowoczesna aranżacja Twojego ogrodu</h1>
-                  <p class="pr-16">
+          <div class="swiper-slide js-slider slide bg-beige">
+            <div class="relative">
+              <img
+                class="md:hidden object-cover h-60 md:h-[720px] max-h-full relative right-0 top-0 w-full md:w-[50%] md:pl-12"
+                src="./src/assets/hero_garden.png"
+                alt=""
+              />
+              <div class="md:hidden w-36 md:w-48 h-16 md:h-24 bg-light-gray absolute bottom-0 right-0 flex">
+                <button class="btn-square swiper-btn-prev">
+                  <img class="rotate-180" src="./src/assets/arrow.svg" />
+                </button>
+                <button class="btn-square swiper-btn-next">
+                  <img src="./src/assets/arrow.svg" />
+                </button>
+              </div>
+            </div>
+            <div class="wrapper md:grid md:grid-cols-12 md:min-h-[720px] items-center py-12 md:py-0">
+              <div class="md:col-start-1 md:col-span-6 xl:col-span-5 xs:px-4">
+                <div class="flex flex-col gap-6 md:gap-11 md:pb-9 pt-6 md:pt-0">
+                  <h1 class="leading-tight z-30">Nowoczesna aranżacja Twojego ogrodu</h1>
+                  <p class="md:pr-16">
                     Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy
                     zakres usług z indywidualnym podejściem do każdego projektu.
                   </p>
                 </div>
-                <div class="flex pt-9 gap-9">
+
+                <div class="flex flex-wrap flex-row pt-12 md:pt-9 gap-6 md:gap-9">
                   <button class="btn btn-main">Skontaktuj się z nami</button>
                   <button class="btn btn-alt-green flex items-center">
                     Zobacz nasze realizacje
                     <svg
-                      class="rotate-90 ml-2 -mr-1 transition"
+                      class="rotate-90 ml-6 sm:ml-2 -mr-1 transition"
                       width="16"
                       height="16"
                       viewBox="0 0 16 16"
@@ -145,12 +192,8 @@
                 </div>
               </div>
               <div>
-                <img
-                  class="object-cover h-[720px] max-h-full absolute right-0 top-0 w-[50%] pl-12"
-                  src="./src/assets/hero_garden.png"
-                  alt=""
-                />
-                <div class="w-48 h-24 bg-light-gray absolute bottom-0 right-0 flex">
+                <img class="slide-img" src="./src/assets/hero_garden.png" alt="" />
+                <div class="hidden w-48 h-24 bg-light-gray absolute bottom-0 right-0 md:flex">
                   <button class="btn-square swiper-btn-prev">
                     <img class="rotate-180" src="./src/assets/arrow.svg" />
                   </button>
@@ -161,24 +204,39 @@
               </div>
             </div>
           </div>
-          <div
-            class="swiper-slide !w-full js-slider relative bg-white flex flex-col items-center py-24 h-[720px] mt-18"
-          >
-            <div class="wrapper grid grid-cols-12">
-              <div class="flex flex-col col-start-1 col-span-5">
-                <div class="flex flex-col gap-11 pb-9">
-                  <h1 class="leading-tight">Nowoczesna aranżacja Twojego ogrodu</h1>
-                  <p class="pr-16">
+
+          <div class="swiper-slide js-slider slide bg-white">
+            <div class="relative">
+              <img
+                class="md:hidden object-cover h-60 md:h-[720px] max-h-full relative right-0 top-0 w-full md:w-[50%] md:pl-12"
+                src="./src/assets/hero_garden.png"
+                alt=""
+              />
+              <div class="md:hidden w-36 md:w-48 h-16 md:h-24 bg-light-gray absolute bottom-0 right-0 flex">
+                <button class="btn-square swiper-btn-prev">
+                  <img class="rotate-180" src="./src/assets/arrow.svg" />
+                </button>
+                <button class="btn-square swiper-btn-next">
+                  <img src="./src/assets/arrow.svg" />
+                </button>
+              </div>
+            </div>
+            <div class="wrapper md:grid md:grid-cols-12 md:min-h-[720px] items-center py-12 md:py-0">
+              <div class="md:col-start-1 md:col-span-6 xl:col-span-5 px-4">
+                <div class="flex flex-col gap-6 md:gap-11 md:pb-9 pt-6 md:pt-0">
+                  <h1 class="leading-tight z-30">Ogród marzeń. Przestrzeń do relaksu i inspiracji.</h1>
+                  <p class="md:pr-16">
                     Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy
                     zakres usług z indywidualnym podejściem do każdego projektu.
                   </p>
                 </div>
-                <div class="flex pt-9 gap-9">
+
+                <div class="flex flex-wrap flex-row pt-12 md:pt-9 gap-6 md:gap-9">
                   <button class="btn btn-main">Skontaktuj się z nami</button>
                   <button class="btn btn-alt-green flex items-center">
                     Zobacz nasze realizacje
                     <svg
-                      class="rotate-90 ml-2 -mr-1 transition"
+                      class="rotate-90 ml-6 sm:ml-2 -mr-1 transition"
                       width="16"
                       height="16"
                       viewBox="0 0 16 16"
@@ -193,12 +251,8 @@
                 </div>
               </div>
               <div>
-                <img
-                  class="object-cover h-[720px] max-h-full absolute right-0 top-0 w-[50%] pl-12"
-                  src="./src/assets/hero_garden.png"
-                  alt=""
-                />
-                <div class="w-48 h-24 bg-light-gray absolute bottom-0 right-0 flex">
+                <img class="slide-img" src="./src/assets/hero_garden.png" alt="" />
+                <div class="hidden w-48 h-24 bg-light-gray absolute bottom-0 right-0 md:flex">
                   <button class="btn-square swiper-btn-prev">
                     <img class="rotate-180" src="./src/assets/arrow.svg" />
                   </button>
@@ -213,10 +267,10 @@
       </div>
     </header>
 
-    <!-- <main>
-      <section class="js-services bg-light-gray pt-32 pb-40">
-        <div class="wrapper grid grid-cols-12 gap-24">
-          <div class="col-start-2 w-full col-span-7">
+    <main>
+      <section class="js-services bg-light-gray pt-18 md:pt-32 pb-24 md:pb-40">
+        <div class="wrapper xl:grid xl:grid-cols-12 gap-24 px-8 xl:px-0">
+          <div class="xl:col-start-2 xl:col-span-7 w-full pb-8">
             <span class="label-h text-green">Oferta</span>
             <h2 class="pb-8">Działamy <span class="italic-h">kompleksowo</span></h2>
             <p>
@@ -226,7 +280,7 @@
             </p>
           </div>
 
-          <div class="flex col-span-full gap-16">
+          <div class="flex flex-col lg:flex-row lg:col-span-full gap-8 lg:gap-4 xl:gap-16">
             <div class="card">
               <div class="card-info">
                 <div class="min-h-[44px] mb-8">
@@ -325,21 +379,21 @@
       </section>
 
       <section>
-        <div class="relative bg-green w-full flex flex-col items-center h-[720px]">
-          <div class="wrapper grid grid-cols-12">
+        <div class="relative w-full bg-green flex flex-col items-center justify-center md:h-[720px]">
+          <div class="wrapper md:grid md:grid-cols-12">
             <div>
               <img
-                class="object-cover h-[720px] max-h-full absolute left-0 top-0 w-[50%] pr-16"
+                class="object-cover h-60 md:h-[720px] max-h-full md:absolute relative left-0 top-0 w-full md:w-[50%]"
                 src="./src/assets/about_garden.png"
                 alt=""
               />
             </div>
 
-            <div class="flex flex-col col-start-7 pl-24 col-span-full">
-              <div class="w-full pb-9 text-light-gray">
+            <div class="flex flex-col col-start-7 py-18 md:py-0 md:pl-24 col-span-full px-8 xl:px-0 xl:pl-24">
+              <div class="w-full md:pb-9 text-light-gray">
                 <span class="label-h">O firmie</span>
                 <h2 class="pb-9">
-                  Tworzymy <br />
+                  Tworzymy <br class="hidden md:block" />
                   z <span class="italic-h">pasją</span>
                 </h2>
                 <p class="text-light-gray">
@@ -371,9 +425,9 @@
         </div>
       </section>
 
-      <section class="bg-beige pt-30">
-        <div class="wrapper grid grid-cols-12">
-          <div class="col-span-4 flex justify-center">
+      <section class="bg-beige pt-18 lg:pt-30">
+        <div class="wrapper lg:grid lg:grid-cols-12">
+          <div class="lg:col-span-4 flex justify-center px-4 lg:px-0">
             <div>
               <span class="label-h text-green">Realizacje</span>
               <h2 class="pb-9">
@@ -384,56 +438,86 @@
           </div>
         </div>
 
-        <div class="relative pt-24 max-w-[1920px] m-auto">
+        <div class="relative pt-12 lg:pt-24 max-w-[1920px] mx-2 lg:mx-12 xl:mx-auto">
           <div
             id="js-gallery"
-            class="js-gallery m-auto grid-image-container max-h-[1400px] transition-height duration-700"
+            class="js-gallery !mx-auto grid-image-container max-h-[1400px] transition-height duration-700 w-full"
           >
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
-              <img class="grid-item" src="./src/assets/gallery/g_01.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
-              <img class="grid-item" src="./src/assets/gallery/g_02.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
-              <img class="grid-item" src="./src/assets/gallery/g_03.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_05.png">
-              <img class="grid-item" src="./src/assets/gallery/g_05.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_06.png">
-              <img class="grid-item" src="./src/assets/gallery/g_06.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_04.png">
-              <img class="grid-item" src="./src/assets/gallery/g_04.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_08.png">
-              <img class="grid-item" src="./src/assets/gallery/g_08.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_07.png">
-              <img class="grid-item" src="./src/assets/gallery/g_07.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_09.png">
-              <img class="grid-item" src="./src/assets/gallery/g_09.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
-              <img class="grid-item" src="./src/assets/gallery/g_01.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
-              <img class="grid-item" src="./src/assets/gallery/g_02.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
-              <img class="grid-item" src="./src/assets/gallery/g_03.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
-              <img class="grid-item" src="./src/assets/gallery/g_01.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
-              <img class="grid-item" src="./src/assets/gallery/g_02.png" alt="" />
-            </a>
-            <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
-              <img class="grid-item" src="./src/assets/gallery/g_03.png" alt="" />
-            </a>
+            <div class="grid-sizer">
+              <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_01.png" alt="" />
+              </a>
+            </div>
+            <div class="grid-sizer">
+              <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_02.png" alt="" />
+              </a>
+            </div>
+            <div class="grid-sizer">
+              <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_03.png" alt="" />
+              </a>
+            </div>
+            <div class="grid-sizer">
+              <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_05.png">
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_05.png" alt="" />
+              </a>
+            </div>
+            <div class="grid-sizer">
+              <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_06.png">
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_06.png" alt="" />
+              </a>
+            </div>
+            <div class="grid-sizer">
+              <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_04.png">
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_04.png" alt="" />
+              </a>
+            </div>
+            <div class="grid-sizer">
+              <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_08.png">
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_08.png" alt="" />
+              </a>
+            </div>
+            <div class="grid-sizer">
+              <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_07.png">
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_07.png" alt="" />
+              </a>
+            </div>
+            <div class="grid-sizer">
+              <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_09.png">
+                <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_09.png" alt="" />
+              </a>
+              <div class="grid-sizer">
+                <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_01.png" alt="" />
+                </a>
+              </div>
+              <div class="grid-sizer">
+                <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_02.png" alt="" />
+                </a>
+              </div>
+              <div class="grid-sizer">
+                <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_03.png" alt="" />
+                </a>
+              </div>
+              <div class="grid-sizer">
+                <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_01.png">
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_01.png" alt="" />
+                </a>
+              </div>
+              <div class="grid-sizer">
+                <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_02.png">
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_02.png" alt="" />
+                </a>
+              </div>
+              <div class="grid-sizer">
+                <a class="js-grid-item grid-image-container" data-fslightbox href="./src/assets/gallery/g_03.png">
+                  <img class="grid-item" loading="lazy" src="./src/assets/gallery/g_03.png" alt="" />
+                </a>
+              </div>
+            </div>
           </div>
 
           <div class="js-gradient gradient absolute bottom-0 h-3/4 z-30"></div>
@@ -458,16 +542,18 @@
         </div>
       </section>
 
-      <section class="wrapper grid grid-cols-12 py-15">
-        <div class="col-start-2 col-span-10 bg-green py-30 text-light-gray">
-          <div class="grid grid-cols-10 items-end">
-            <h2 class="col-start-2 col-span-6 text-[40px] leading-tight font-normal tracking-tighter">
+      <section class="wrapper md:grid md:grid-cols-12 px-6 sm:px-12 py-18 md:py-15 md:px-0">
+        <div
+          class="md:col-start-2 md:col-span-10 bg-green py-15 md:py-30 text-light-gray px-8 xl:px-0 text-center md:text-left"
+        >
+          <div class="flex flex-col md:grid md:grid-cols-10 md:items-end gap-8 md:gap-0">
+            <h2 class="md:col-start-2 md:col-span-6 text-[40px] leading-tight font-normal tracking-tighter">
               Zostańmy w kontakcie!<br />
               Znajdziesz nas na <span class="italic-h">Instagramie</span>.
             </h2>
-            <aside class="grid col-start-8 justify-start gap-6">
-              <h4 class="col-span-6">
-                Śledź nasze <br />
+            <aside class="flex flex-col md:grid md:col-start-8 items-center md:justify-start gap-6">
+              <h4 class="md:col-span-6">
+                Śledź nasze <br class="hidden md:block" />
                 najnowsze realizacje!
               </h4>
               <button class="btn btn-main-white">Instagram</button>
@@ -477,12 +563,12 @@
       </section>
     </main>
 
-    <footer class="bg-light-black py-20">
-      <div class="wrapper grid grid-cols-12">
+    <footer class="bg-light-black py-12 md:py-20 px-8 lg:px-0">
+      <div class="wrapper md:grid md:grid-cols-12">
         <div class="col-start-2 col-span-10 text-light-gray">
-          <div class="flex justify-between">
-            <img src="./src/assets/logo_white.svg" alt="" />
-            <div class="flex items-center gap-6">
+          <div class="flex flex-col lg:flex-row justify-between items-center gap-8 lg:gap-0">
+            <img class="w-1/2 md:w-auto" src="./src/assets/logo_white.svg" alt="" />
+            <div class="flex flex-col md:flex-row items-center gap-6">
               <span>Daj znać, co możemy dla Ciebie zrobić!</span>
               <button class="btn btn-main">Skontaktuj się z nami</button>
             </div>
@@ -490,16 +576,16 @@
 
           <div class="divider"></div>
 
-          <div class="text-sm flex justify-between pb-30">
+          <div class="text-sm flex flex-row gap-6 md:gap-0 justify-between pb-16 md:pb-30 items-center">
             <nav>
-              <ul class="flex gap-12">
+              <ul class="flex flex-col lg:flex-row gap-4 lg:gap-12">
                 <li><a class="link under-alt before:bg-light-gray" href="#contact">Kontakt</a></li>
                 <li><a class="link under-alt before:bg-light-gray" href="https://instagram.com">Instagram</a></li>
                 <li><a class="link under-alt before:bg-light-gray" href="https://facebook.com">Facebook</a></li>
                 <li><a class="link under-alt before:bg-light-gray" href="https://linkedin.com">Linkedin</a></li>
               </ul>
             </nav>
-            <ul class="flex gap-12">
+            <ul class="flex gap-4 lg:gap-12 flex-col lg:flex-row">
               <li>
                 <a class="link under-alt before:bg-light-gray" href="tel:000000000">000-000-000</a>
               </li>
@@ -510,7 +596,7 @@
               </li>
             </ul>
           </div>
-          <div class="flex justify-between">
+          <div class="flex flex-col md:flex-row justify-between items-center gap-2 md:gap-0">
             <span>Prawa zastrzeżone &copy; 2022</span>
             <div class="inline-flex gap-4">
               <span> made by </span>
@@ -519,7 +605,6 @@
           </div>
         </div>
       </div>
-    </footer> -->
-
+    </footer>
   </body>
 </html>

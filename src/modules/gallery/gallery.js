@@ -12,12 +12,12 @@ const toggleGradient = () => (isRevealed ? gradientEl.classList.remove('!h-0') :
 const handleRevealBtn = () => {
   revealBtnText.textContent = revealBtnText.textContent === 'Rozwiń' ? 'Zwiń' : 'Rozwiń';
   revealArrow.classList.toggle('!-rotate-90');
+  revealBtn.classList.toggle('!btn-alt-black-inner');
 };
 
 const changeGalleryHeight = () => {
-  // const height = gallery.style.height;
   gallery.classList.toggle('max-h-[1400px]');
-  gallery.classList.toggle(`max-h-[2500px]`);
+  gallery.classList.toggle(`max-h-auto`);
 };
 
 export const revealProjects = () => {

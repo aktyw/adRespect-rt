@@ -4,8 +4,8 @@ const navContainer = document.querySelector('.js-nav-container');
 const swiper = document.querySelector('.swiper');
 
 const options = {
-  rootMargin: '-200px',
-  threshold: 0,
+  rootMargin: '-50px',
+  threshold: 0.5,
 };
 
 const handler = (entries) => {

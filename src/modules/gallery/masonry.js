@@ -4,9 +4,9 @@ const gallery = document.querySelector('.js-gallery');
 
 export const masonry = new Masonry(gallery, {
   itemSelector: '.js-grid-item',
-  columnWidth: 450,
-  gutter: 34,
+  columnWidth: '.grid-sizer',
   fitWidth: true,
-  transitionDuration: '1s',
+  gutter: 45,
+  transitionDuration: '.5s',
+  stagger: 20,
 });
-
