@@ -6,6 +6,7 @@ export const swiper = new Swiper('.swiper', {
     delay: 3500,
     pauseOnMouseEnter: true,
   },
+
   speed: 500,
   loop: true,
   slidesPerView: 1,
@@ -15,6 +16,7 @@ export const swiper = new Swiper('.swiper', {
     nextEl: '.swiper-btn-next',
     prevEl: '.swiper-btn-prev',
   },
+
   effect: 'coverflow',
   coverflowEffect: {
     rotate: 25,

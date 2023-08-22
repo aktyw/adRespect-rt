@@ -1,5 +1,5 @@
 import { menuState } from './dropdown';
-import { isMenuOpen } from './hamburger';
+import { isOpenMobileMenu } from './hamburger';
 const navContainer = document.querySelector('.js-nav-container');
 const swiper = document.querySelector('.swiper');
 
@@ -20,11 +20,12 @@ const showNavbar = () => {
 };
 
 const hideNavbar = () => {
-  if (menuState.isOpenMenu || isMenuOpen) return;
-  console.log(isMenuOpen);
+  if (menuIsOpen) return;
   navContainer.classList.add('-translate-y-20');
   navContainer.classList.remove('translate-y-0');
 };
+
+const menuIsOpen = () => menuState.isOpenMenu || isOpenMobileMenu;
 
 export const observer = new IntersectionObserver(handler, options);
 

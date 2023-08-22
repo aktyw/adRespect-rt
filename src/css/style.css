@@ -13,6 +13,7 @@
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url('/src/assets/fonts/Inter-Regular.woff2') format('woff2');
 }
 
@@ -20,6 +21,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
   src: url('/src/assets/fonts/Montserrat-Medium.woff2') format('woff2');
 }
 
@@ -52,7 +54,10 @@
 }
 
 @layer base {
-
+  ::selection {
+    @apply bg-greeny-600
+  }
+  
   * {
     scroll-margin-top: 30px;
   }

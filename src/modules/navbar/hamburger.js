@@ -3,7 +3,7 @@ import { resetSubMenu } from './mobile';
 const hamburger = document.querySelector('.js-hamburger');
 const menu = document.querySelector('.js-mobile-menu');
 
-export let isMenuOpen = false;
+export let isOpenMobileMenu = false;
 
 export const handleMenu = () => {
   toggleHamburger();
@@ -12,7 +12,7 @@ export const handleMenu = () => {
   resetSubMenu();
 };
 
-const toggleMenuState = () => (isMenuOpen = !isMenuOpen);
+const toggleMenuState = () => (isOpenMobileMenu = !isOpenMobileMenu);
 
 const toggleMenu = () => menu.classList.toggle('!translate-y-0');
 
