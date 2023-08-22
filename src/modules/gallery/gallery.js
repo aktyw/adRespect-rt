@@ -1,5 +1,6 @@
 import { masonry } from './masonry';
 import imagesLoaded from 'imagesloaded';
+import { handleDOMDimensions as dimensions } from '../../main';
 
 const gallery = document.querySelector('.js-gallery');
 const revealBtn = document.querySelector('.js-reveal');
@@ -20,22 +21,19 @@ const handleRevealBtn = () => {
   revealBtn.classList.toggle('!btn-alt-black-inner');
 };
 
-const getElementHeight = (element) => element.offsetHeight;
-const setElementHeight = (element, height) => (element.style.height = `${height}px`);
-
 const changeGalleryHeight = () => {
   gallery.classList.toggle(`!max-h-full`);
 
   if (!isRevealed) return;
 
-  const galleryHeight = getElementHeight(gallery);
-  setElementHeight(gallery, galleryHeight);
+  const galleryHeight = dimensions.getElementHeight(gallery);
+  dimensions.setElementHeight(gallery, galleryHeight);
 };
 
 const createImageElement = (imageRelLink, alt = '') => {
   const template = `
         <a class="js-grid-item grid-image-container" data-fslightbox="gallery" href="${imageRelLink}">
-          <img class="grid-item" src="./src/assets/gallery/${imageRelLink}" alt="${alt}" />
+          <img class="grid-item" src="${imageRelLink}" alt="${alt}" />
         </a>
       `;
 
@@ -61,7 +59,7 @@ const appendImages = () => {
 
 const resetMasonryLayout = () => imagesLoaded(gallery).on('progress', () => masonry.layout());
 
-export const revealProjects = () => {
+export const toggleRevealProjects = () => {
   toggleGradient();
   handleRevealBtn();
   toggleRevealState();
@@ -75,5 +73,5 @@ const loadImages = () => {
   resetMasonryLayout();
 };
 
-revealBtn.addEventListener('click', revealProjects);
+revealBtn.addEventListener('click', toggleRevealProjects);
 revealBtn.addEventListener('click', loadImages, { once: true });
