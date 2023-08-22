@@ -9,6 +9,4 @@ export const expandSubMenu = () => {
 menuExpandBtn.addEventListener('click', expandSubMenu);
 subMenuCollapseBtn.addEventListener('click', () => menu.classList.remove('!-translate-x-[50%]'));
 
-export const resetSubMenu = () => {
-  menu.classList.remove('!-translate-x-[50%]');
-};
+export const resetSubMenu = () => menu.classList.remove('!-translate-x-[50%]');

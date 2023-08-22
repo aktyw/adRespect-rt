@@ -2,6 +2,7 @@ import { resetSubMenu } from './mobile';
 
 const hamburger = document.querySelector('.js-hamburger');
 const menu = document.querySelector('.js-mobile-menu');
+
 export let isMenuOpen = false;
 
 export const handleMenu = () => {

@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" href="/src/assets/fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/src/assets/fonts/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin />
     <script type="module" src="./src/main.js"></script>
     <title>Giard Design</title>
   </head>
@@ -47,6 +49,7 @@
           </ul>
 
           <!-- menu -->
+
           <ul class="js-mobile-menu menu flex md:hidden overflow-x-hidden translate-y-[125%] duration-500">
             <li class="js-btn-menu-mobile relative flex flex-row w-screen">
               <button class="js-link-mobile flex link !pb-0 before:bg-light-black items-center">
@@ -66,7 +69,7 @@
 
               <!-- submenu -->
 
-              <ul class="h-screen w-screen absolute js-mobile-submenu translate-x-full gap-8 flex flex-col">
+              <ul class="h-full w-screen absolute js-mobile-submenu translate-x-full gap-8 flex flex-col">
                 <li class="js-menu-back text-light-black font-bold flex items-center">
                   Wstecz
                   <svg
@@ -202,11 +205,11 @@
               </div>
             </li>
 
-            <li><a class="link under-alt !pb-0 before:bg-light-black" href="">O firmie</a></li>
+            <li><a class="link under-alt !pb-0 before:bg-light-black" href="#about">O firmie</a></li>
             <li>
-              <a class="link under-alt !pb-0 before:bg-light-black" href="">Realizacje</a>
+              <a class="link under-alt !pb-0 before:bg-light-black" href="#gallery">Realizacje</a>
             </li>
-            <li><a class="link under-alt !pb-0 before:bg-light-black" href="">Kontakt</a></li>
+            <li><a class="link under-alt !pb-0 before:bg-light-black" href="#contact">Kontakt</a></li>
 
             <li>
               <div class="relative flex items-center">
@@ -235,6 +238,8 @@
           </ul>
         </nav>
       </div>
+
+      <!-- slider -->
 
       <div class="swiper sm:w-full h-full md:h-auto">
         <div class="swiper-wrapper">
@@ -265,8 +270,8 @@
                 </div>
 
                 <div class="flex flex-wrap flex-row pt-12 md:pt-9 gap-6 md:gap-9">
-                  <button class="btn btn-main">Skontaktuj się z nami</button>
-                  <button class="btn btn-alt-green flex items-center">
+                  <a href="#contact" class="btn btn-main">Skontaktuj się z nami</a>
+                  <a class="btn btn-alt-green flex items-center" href="#gallery">
                     Zobacz nasze realizacje
                     <svg
                       class="rotate-90 ml-6 sm:ml-2 -mr-1 transition"
@@ -280,7 +285,7 @@
                         d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
                       />
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
               <div>
@@ -324,8 +329,8 @@
                 </div>
 
                 <div class="flex flex-wrap flex-row pt-12 md:pt-9 gap-6 md:gap-9">
-                  <button class="btn btn-main">Skontaktuj się z nami</button>
-                  <button class="btn btn-alt-green flex items-center">
+                  <a class="btn btn-main" href="#contact">Skontaktuj się z nami</a>
+                  <a class="btn btn-alt-green flex items-center" href="#gallery">
                     Zobacz nasze realizacje
                     <svg
                       class="rotate-90 ml-6 sm:ml-2 -mr-1 transition"
@@ -339,7 +344,7 @@
                         d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
                       />
                     </svg>
-                  </button>
+                  </a>
                 </div>
               </div>
               <div>
@@ -360,6 +365,7 @@
     </header>
 
     <main>
+      <!-- oferta -->
       <section class="js-services bg-light-gray pt-18 md:pt-32 pb-24 md:pb-40">
         <div class="wrapper xl:grid xl:grid-cols-12 gap-24 px-8 xl:px-0">
           <div class="xl:col-start-2 xl:col-span-7 w-full pb-8">
@@ -447,7 +453,7 @@
                   <p>Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
                 </div>
               </div>
-              <a class="link text-green" href="">
+              <a class="link text-green" href="#gallery">
                 <span class="flex items-center under before:bg-green">
                   Zobacz nasze realizacje
                   <svg
@@ -470,7 +476,9 @@
         </div>
       </section>
 
-      <section>
+      <!-- o firmie -->
+
+      <section id="about">
         <div class="relative w-full bg-green flex flex-col items-center justify-center md:h-[720px]">
           <div class="wrapper md:grid md:grid-cols-12">
             <div>
@@ -496,7 +504,7 @@
                 </p>
               </div>
               <div class="flex pt-9 gap-9">
-                <button class="btn btn-alt-white inline-flex items-center">
+                <a href="#contact" class="btn btn-alt-white inline-flex items-center">
                   Poznaj nas bliżej
                   <svg
                     class="ml-2 -mr-1 transition"
@@ -510,14 +518,16 @@
                       d="M7.99528 -1.20755e-06L7.09959 0.895696L13.5769 7.36358L-7.5502e-07 7.36358L-6.43745e-07 8.63642L13.5675 8.63642L7.09959 15.1043L7.99529 16L16 7.99529L7.99528 -1.20755e-06Z"
                     />
                   </svg>
-                </button>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="bg-beige pt-18 lg:pt-30">
+      <!-- galeria -->
+
+      <section id="gallery" class="bg-beige pt-18 lg:pt-30">
         <div class="wrapper lg:grid lg:grid-cols-12">
           <div class="lg:col-span-4 flex justify-center px-4 lg:px-0">
             <div>
@@ -531,10 +541,7 @@
         </div>
 
         <div class="relative pt-12 lg:pt-24 max-w-[1920px] mx-2 lg:mx-12 xl:mx-auto">
-          <div
-            id="js-gallery"
-            class="js-gallery !mx-auto grid-image-container max-h-[1400px] transition-height duration-700 w-full"
-          >
+          <div class="js-gallery !mx-auto grid-image-container max-h-[1400px] transition-height duration-700 w-full">
             <div class="grid-sizer">
               <a class="js-grid-item grid-image-container" data-fslightbox href="./g_01.png">
                 <img class="grid-item" src="./src/assets/gallery/g_01.png" alt="Ogród i palmy" />
@@ -634,7 +641,9 @@
         </div>
       </section>
 
-      <section class="wrapper md:grid md:grid-cols-12 px-6 sm:px-12 py-18 md:py-15 md:px-0">
+      <!-- kontakt -->
+
+      <section id="contact" class="wrapper md:grid md:grid-cols-12 px-6 sm:px-12 py-18 md:py-15 md:px-0">
         <div
           class="md:col-start-2 md:col-span-10 bg-green py-15 md:py-30 text-light-gray px-8 xl:px-0 text-center md:text-left"
         >
@@ -654,6 +663,8 @@
         </div>
       </section>
     </main>
+
+    <!-- stopka -->
 
     <footer class="bg-light-black py-12 md:py-20 px-8 lg:px-0">
       <div class="wrapper md:grid md:grid-cols-12">
