@@ -63,6 +63,10 @@
     @apply w-fit relative cursor-pointer 
   }
 
+  .menu {
+    @apply text-3xl h-screen w-[200vw] bg-gradient-to-t from-beige via-white to-white z-40 !fixed
+    top-0 left-0 justify-center items-start flex-col gap-8 p-16 transition-all
+  }
 
   .slide {
     @apply !w-full relative md:px-8 md:min-h-[720px] mt-18 

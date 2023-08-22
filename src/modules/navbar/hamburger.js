@@ -1,17 +1,21 @@
+import { resetSubMenu } from './mobile';
+
 const hamburger = document.querySelector('.js-hamburger');
 const menu = document.querySelector('.js-mobile-menu');
-const closeMenuBtn = document.querySelector('.js-close-menu');
-const mobileMenu = document.querySelector('.js-mobile-menu');
+export let isMenuOpen = false;
 
-export const openMenu = () => {
-  menu.classList.remove('translate-x-full');
+export const handleMenu = () => {
+  toggleHamburger();
+  toggleMenu();
+  toggleMenuState();
+  resetSubMenu();
 };
 
-export const hideMenu = (e) => {
-  e.preventDefault();
-  menu.classList.add('translate-x-full');
-};
+const toggleMenuState = () => (isMenuOpen = !isMenuOpen);
 
-hamburger.addEventListener('click', openMenu);
-closeMenuBtn.addEventListener('click', hideMenu);
-mobileMenu.addEventListener('click', hideMenu);
+const toggleMenu = () => menu.classList.toggle('!translate-y-0');
+
+const toggleHamburger = () => hamburger.classList.toggle('tham-active');
+
+hamburger.addEventListener('click', handleMenu);
+menu.addEventListener('click', (e) => e.target.closest('.js-item-mobile') && handleMenu());

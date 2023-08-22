@@ -1,5 +1,5 @@
 import { menuState } from './dropdown';
-
+import { isMenuOpen } from './hamburger';
 const navContainer = document.querySelector('.js-nav-container');
 const swiper = document.querySelector('.swiper');
 
@@ -20,8 +20,8 @@ const showNavbar = () => {
 };
 
 const hideNavbar = () => {
-  if (menuState.isOpenMenu) return;
-
+  if (menuState.isOpenMenu || isMenuOpen) return;
+  console.log(isMenuOpen);
   navContainer.classList.add('-translate-y-20');
   navContainer.classList.remove('translate-y-0');
 };

@@ -39,74 +39,101 @@
                 </svg>
               </div>
             </li>
-            <li class="js-hamburger z-50">
-              <div class="space-y-2">
-                <span class="block w-8 h-1 bg-light-black"></span>
-                <span class="block w-8 h-1 bg-light-black"></span>
-                <span class="block w-8 h-1 bg-light-black"></span>
+            <div class="js-hamburger tham tham-e-squeeze tham-w-6 z-50">
+              <div class="tham-box">
+                <div class="tham-inner"></div>
               </div>
-            </li>
+            </div>
           </ul>
 
-          <ul
-            class="js-mobile-menu flex md:hidden h-screen w-screen bg-light-gray z-50 !fixed top-0 left-0 justify-center items-start flex-col text-5xl gap-12 p-16 translate-x-full"
-          >
-            <button class="js-close-menu absolute top-12 right-12">X</button>
-            <li class="js-btn-menu-mobile relative">
-              <a class="js-link-mobile flex link !pb-0 before:bg-light-black">Oferta</a>
+          <!-- menu -->
+          <ul class="js-mobile-menu menu flex md:hidden overflow-x-hidden translate-y-[125%] duration-500">
+            <li class="js-btn-menu-mobile relative flex flex-row w-screen">
+              <button class="js-link-mobile flex link !pb-0 before:bg-light-black items-center">
+                Oferta
+                <svg
+                  class="-rotate-90 ml-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="48"
+                  viewBox="0 -960 960 960"
+                  width="48"
+                >
+                  <path
+                    d="M480-362.384 271.384-571l21.462-21.462L480-405.308l187.154-187.154L688.616-571 480-362.384Z"
+                  />
+                </svg>
+              </button>
 
-              <div class="hidden dropdown absolute top-12 right-0">
-                <ul class="py-2 text-sm text-light-black">
-                  <li>
-                    <a href="#" class="">Wizualizacje</a>
-                  </li>
-                  <li>
-                    <button class="relative flex items-center justify-between w-full xs:px-4 py-2 hover:bg-gray-100">
-                      Aranżacje
-                      <svg
-                        class="transition"
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="20"
-                        width="20"
-                        viewBox="0 -960 960 960"
-                      >
-                        <path
-                          d="M480-362.384 271.384-571l21.462-21.462L480-405.308l187.154-187.154L688.616-571 480-362.384Z"
-                        />
-                      </svg>
-                    </button>
-                    <div class="hidden dropdown absolute top-9 left-44 ml-2">
-                      <ul class="py-2 text-sm" aria-labelledby="sub-menu">
-                        <li>
-                          <a href="#" class="">Ogród</a>
-                        </li>
-                        <li>
-                          <a href="#" class="">Przestrzeń</a>
-                        </li>
-                        <li>
-                          <a href="#" class="">Parki</a>
-                        </li>
-                        <li>
-                          <a href="#" class="">Skwery</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <a href="#" class="">Realizacje</a>
-                  </li>
-                  <li>
-                    <a href="#" class="">Projekty</a>
-                  </li>
-                </ul>
-              </div>
+              <!-- submenu -->
+
+              <ul class="h-screen w-screen absolute js-mobile-submenu translate-x-full gap-8 flex flex-col">
+                <li class="js-menu-back text-light-black font-bold flex items-center">
+                  Wstecz
+                  <svg
+                    class="rotate-90 ml-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="48"
+                    viewBox="0 -960 960 960"
+                    width="48"
+                  >
+                    <path
+                      d="M480-362.384 271.384-571l21.462-21.462L480-405.308l187.154-187.154L688.616-571 480-362.384Z"
+                    />
+                  </svg>
+                </li>
+                <li>
+                  <a href="#" class="js-item-mobile">Wizualizacje</a>
+                </li>
+                <li>
+                  <button
+                    class="js-mobile-second-menu relative flex items-center justify-between w-full hover:bg-gray-100"
+                  >
+                    Aranżacje
+                    <svg
+                      class="transition"
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="20"
+                      width="20"
+                      viewBox="0 -960 960 960"
+                    >
+                      <path
+                        d="M480-362.384 271.384-571l21.462-21.462L480-405.308l187.154-187.154L688.616-571 480-362.384Z"
+                      />
+                    </svg>
+                  </button>
+                  <div class="hidden dropdown absolute top-9 left-44 ml-2">
+                    <ul class="py-2 text-sm" aria-labelledby="sub-menu">
+                      <li>
+                        <a href="#" class="js-item-mobile">Ogród</a>
+                      </li>
+                      <li>
+                        <a href="#" class="js-item-mobile">Przestrzeń</a>
+                      </li>
+                      <li>
+                        <a href="#" class="js-item-mobile">Parki</a>
+                      </li>
+                      <li>
+                        <a href="#" class="js-item-mobile">Skwery</a>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <a href="#" class="js-item-mobile">Realizacje</a>
+                </li>
+                <li>
+                  <a href="#" class="js-item-mobile">Projekty</a>
+                </li>
+              </ul>
             </li>
 
-            <li><a class="js-link-mobile link !pb-0 before:bg-light-black" href="">O firmie</a></li>
+            <!-- desktop menu -->
+
+            <li><a class="js-item-mobile link !pb-0 before:bg-light-black" href="">O firmie</a></li>
             <li>
-              <a class="js-link-mobile link !pb-0 before:bg-light-black" href="">Realizacje</a>
+              <a class="js-item-mobile link !pb-0 before:bg-light-black" href="">Realizacje</a>
             </li>
-            <li><a class="js-link-mobile link !pb-0 before:bg-light-black" href="">Kontakt</a></li>
+            <li><a class="js-item-mobile link !pb-0 before:bg-light-black" href="">Kontakt</a></li>
           </ul>
 
           <ul class="gap-12 [&>li]:flex [&>li]:items-center md:flex hidden">
