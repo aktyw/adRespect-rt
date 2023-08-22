@@ -17,7 +17,7 @@ const handleRevealBtn = () => {
 
 const changeGalleryHeight = () => {
   gallery.classList.toggle('max-h-[1400px]');
-  gallery.classList.toggle(`max-h-auto`);
+  gallery.classList.toggle(`max-h-full`);
 };
 
 export const revealProjects = () => {
