@@ -1,5 +1,6 @@
 import { menuState } from './dropdown';
 import { isOpenMobileMenu } from './hamburger';
+
 const navContainer = document.querySelector('.js-nav-container');
 const swiper = document.querySelector('.swiper');
 
@@ -20,7 +21,7 @@ const showNavbar = () => {
 };
 
 const hideNavbar = () => {
-  if (menuIsOpen) return;
+  if (menuIsOpen()) return;
   navContainer.classList.add('-translate-y-20');
   navContainer.classList.remove('translate-y-0');
 };

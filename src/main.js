@@ -1,10 +1,10 @@
 import './css/style.css';
+export { hideElement, handleDOMDimensions } from './utils/utils';
 export { fslightbox } from 'fslightbox';
 export { toggleRevealProjects } from './modules/gallery/gallery';
 export { menuState } from './modules/navbar/dropdown';
 export { observer } from './modules/navbar/navbar';
 export { swiper } from './modules/slider/swiper';
-export { hideElement, handleDOMDimensions } from './utils/utils';
 export { handleMenu, isOpenMobileMenu } from './modules/navbar/hamburger';
 export { masonry } from './modules/gallery/masonry';
 export { expandSubMenu, resetSubMenu } from './modules/navbar/mobile';

@@ -57,8 +57,6 @@ const appendImages = () => {
   masonry.appended(elements);
 };
 
-const resetMasonryLayout = () => imagesLoaded(gallery).on('progress', () => masonry.layout());
-
 export const toggleRevealProjects = () => {
   toggleGradient();
   handleRevealBtn();
@@ -72,6 +70,8 @@ const loadImages = () => {
   refreshFsLightbox();
   resetMasonryLayout();
 };
+
+const resetMasonryLayout = () => imagesLoaded(gallery).on('progress', () => masonry.layout());
 
 revealBtn.addEventListener('click', toggleRevealProjects);
 revealBtn.addEventListener('click', loadImages, { once: true });
