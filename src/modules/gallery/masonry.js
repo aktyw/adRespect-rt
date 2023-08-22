@@ -1,5 +1,5 @@
 import Masonry from 'masonry-layout';
-
+import imagesLoaded from 'imagesloaded';
 const gallery = document.querySelector('.js-gallery');
 
 const options = {
@@ -11,8 +11,6 @@ const options = {
   stagger: 20,
 };
 
-export let masonry;
+export const masonry = new Masonry(gallery, options);
 
-window.addEventListener('DOMContentLoaded', () => {
-  masonry = new Masonry(gallery, options);
-});
+imagesLoaded(gallery).on('progress', () => masonry.layout());
