@@ -81,8 +81,12 @@
   }
 
   .card {
-    @apply bg-white rounded-3xl py-12 px-10 gap-12 col-span-4 flex flex-col 
-    justify-between content-start 
+    @apply bg-white relative rounded-3xl py-12 px-10 gap-12 col-span-4 flex flex-col z-0
+    justify-between content-start transition overflow-hidden duration-500
+    hover:transition hover:shadow-md 
+    before:content-[''] before:absolute before:-top-48 before:-left-48 before:rounded-xl before:duration-700 
+    before:-z-20 before:bg-gradient-to-r before:from-greeny-200  before:h-18 before:w-18 before:transition before:scale-110
+    hover:before:scale-[18]
   }
 
   .card-info {

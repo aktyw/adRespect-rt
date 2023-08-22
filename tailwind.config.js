@@ -23,6 +23,7 @@ export default {
       black: '#000000',
       beige: '#DCC1AB',
       gray: colors.gray,
+      greeny: colors.green,
       transparent: 'transparent',
     },
     fontFamily: {
